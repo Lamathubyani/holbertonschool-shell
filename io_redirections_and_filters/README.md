@@ -1,1 +1,1 @@
-Shell input and output redirections
+Shell initialization files, variables and expansions
