@@ -1,2 +1,11 @@
 #!/bin/bash
-echo "$PATH" | awk -F: '{print NF}'
+path="$PATH:"
+count=0
+
+while [ -n "$path" ]
+do
+    path="${path#*:}"
+    count=$((count + 1))
+done
+
+echo "$count"
