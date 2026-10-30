@@ -1,11 +1,2 @@
 #!/bin/bash
-path="$PATH:"
-count=0
-
-while [ -n "$path" ]
-do
-    path="${path#*:}"
-    count=$((count + 1))
-done
-
-echo "$count"
+echo "$PATH" | tr -cd ':' | wc -c
